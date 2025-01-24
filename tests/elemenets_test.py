@@ -46,3 +46,8 @@ class TestRadioButtons:
         assert output_no == 'No', "'No' has not been selected"
 
 
+class TestWebTable:
+
+    def test_web_table_add_person(self, driver):
+        web_table_page = WebTablePage(driver, 'http://demoqa.com/webtables')
+        web_table_page.open()

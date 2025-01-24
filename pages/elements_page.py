@@ -4,7 +4,8 @@ import time
 from selenium.webdriver.common.by import By
 
 from generator.generator import generated_person
-from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators
+from locators.elements_page_locators import TextBoxPageLocators, CheckBoxPageLocators, RadioButtonPageLocators, \
+    WebTablePageLocators
 from pages.base_page import BasePage
 
 
@@ -78,6 +79,16 @@ class RadioButtonPage(BasePage):
 
     def get_output_result(self):
         return self.element_is_present(self.locators.OUTPUT_RESULT).text
+
+
+class WebTablePage(BasePage):
+    locators = WebTablePageLocators
+
+    def add_new_person(self, count=1):
+        count = random.randint(1,3)
+        while count != 0:
+            count -=1
+            return
 
 
 
