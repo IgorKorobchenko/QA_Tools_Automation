@@ -37,7 +37,8 @@ class WebTablePageLocators:
     FIRST_NAME_INPUT = (By.XPATH, '//*[@id="firstName"]')
     LAST_NAME_INPUT = (By.XPATH, '//*[@id="lastName"]')
     EMAIL_INPUT = (By.XPATH, '//*[@id="userEmail"]')
-    AGE_INPUT = (By.XPATH, '//*[@id="age"]')
+    # AGE_INPUT = (By.XPATH, '//*[@id="age"]')
+    AGE_INPUT = (By.CSS_SELECTOR, 'input[id="age"]')
     SALARY_INPUT = (By.XPATH, '//*[@id="salary"]')
     DEPARTMENT_INPUT = (By.XPATH, '//*[@id="department"]')
     SUBMIT_BUTTON = (By.XPATH, '//*[@id="submit"]')
@@ -47,3 +48,7 @@ class WebTablePageLocators:
     SEARCH_INPUT = (By.CSS_SELECTOR, 'input[id="searchBox"]')
     DELETE_BUTTON = (By.CSS_SELECTOR, 'span[title="Delete"]')
     ROW_PARENT = ".//ancestor::div[@class='rt-tr-group']"
+
+    # update
+    UPDATE_BUTTON = (By.CSS_SELECTOR, 'span[title="Edit"]')
+    # UPDATE_BUTTON = (By.XPATH, '//span[@id="edit-record-1"]')

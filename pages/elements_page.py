@@ -120,6 +120,18 @@ class WebTablePage(BasePage):
         row = delete_button.find_element(By.XPATH, self.locators.ROW_PARENT)
         return row.text.splitlines()
 
+# Flaky test
+    def update_person_info(self):
+        person_info = next(generated_person())
+        age = person_info.age
+        self.element_is_present(self.locators.UPDATE_BUTTON).click()
+        self.element_is_present(self.locators.AGE_INPUT).clear()
+        self.element_is_present(self.locators.AGE_INPUT).send_keys(age)
+        self.element_is_present(self.locators.SUBMIT_BUTTON).click()
+        return str(age)
+
+
+
 
 
 
