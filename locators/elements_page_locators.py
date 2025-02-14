@@ -69,3 +69,8 @@ class ButtonsPageLocators:
 class LinksPageLocators:
     SIMPLE_LINK = (By.XPATH, '//*[@id="simpleLink"]')
     BAD_REQUEST = (By.XPATH, '//*[@id="bad-request"]')
+
+class UploadAndDownloadLocators:
+    UPLOAD_FILE = (By.XPATH, '//*[@id="uploadFile"]')
+    UPLOADED_RESULT = (By.XPATH, '//*[@id="uploadedFilePath"]')
+    DOWNLOAD_FILE = (By.XPATH, '//*[@id="downloadButton"]')
