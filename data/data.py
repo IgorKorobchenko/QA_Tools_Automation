@@ -12,3 +12,4 @@ class Person:
     salary: int = None
     current_address: str = None
     permanent_address: str = None
+    mobile: str = None
