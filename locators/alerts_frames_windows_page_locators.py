@@ -13,3 +13,8 @@ class AlertsPageLocators:
     PROMPT_BOX_ALERT_BUTTON = (By.XPATH, '//*[@id="promtButton"]')
     CONFIRM_RESULT = (By.XPATH, '//*[@id="confirmResult"]')
     PROMPT_RESULT = (By.XPATH, '//*[@id="promptResult"]')
+
+class FramePageLocators:
+    FIRST_FRAME = (By.XPATH, '//*[@id="frame1"]')
+    SECOND_FRAME = (By.XPATH, '//*[@id="frame2"]')
+    TITLE_FRAME = (By.XPATH, '//*[@id="sampleHeading"]')
