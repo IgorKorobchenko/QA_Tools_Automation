@@ -18,3 +18,9 @@ class FramePageLocators:
     FIRST_FRAME = (By.XPATH, '//*[@id="frame1"]')
     SECOND_FRAME = (By.XPATH, '//*[@id="frame2"]')
     TITLE_FRAME = (By.XPATH, '//*[@id="sampleHeading"]')
+
+class NestedFramePageLocators:
+    PARENT_FRAME = (By.XPATH, '//*[@id="frame1"]')
+    PARENT_TEXT = (By.XPATH, '//*[text()="Parent frame"]')
+    CHILD_FRAME = (By.XPATH, '//*[@srcdoc="<p>Child Iframe</p>"]')
+    CHILD_TEXT = (By.XPATH, '//*[text()="Child Iframe"]')
