@@ -15,3 +15,16 @@ class AutoCompletePageLocators:
     MULTI_VALUE_REMOVE = (By.XPATH, '//*[@class="css-xb97g8 auto-complete__multi-value__remove"]')
     SINGLE_VALUE = (By.XPATH, '//*[@class= "auto-complete__single-value css-1uccc91-singleValue"]')
     SINGLE_INPUT = (By.XPATH, '//*[@id= "autoCompleteSingleInput"]')
+
+class DatePickerPageLocators:
+    DATE_INPUT = (By.XPATH, '//*[@id= "datePickerMonthYearInput"]')
+    DATE_SELECT_MONTH = (By.XPATH, '//*[@class="react-datepicker__month-select"]')
+    DATE_SELECT_YEAR = (By.XPATH, '//*[@class="react-datepicker__year-select"]')
+    DATE_SELECT_DAY_LIST = (By.CSS_SELECTOR, 'div[class^="react-datepicker__day react-datepicker__day"]')
+
+    DATE_AND_TIME_INPUT = (By.XPATH, '//*[@id="dateAndTimePickerInput"]')
+    DATE_AND_TIME_MONTH = (By.CSS_SELECTOR, 'div[class="react-datepicker__month-read-view"]')
+    DATE_AND_TIME_YEAR = (By.CSS_SELECTOR, 'div[class="react-datepicker__year-read-view"]')
+    DATE_AND_TIME_TIME_LIST = (By.CSS_SELECTOR, 'li[class="react-datepicker__time-list-item "]')
+    DATE_AND_TIME_MONTH_LIST = (By.CSS_SELECTOR, 'div[class="react-datepicker__month-option"]')
+    DATE_AND_TIME_YEAR_LIST = (By.CSS_SELECTOR, 'div[class="react-datepicker__year-option"]')
