@@ -36,3 +36,15 @@ class SliderPageLocators:
 class ProgressBarPageLocators:
     PROGRESS_BAR_BUTTON = (By.XPATH, '//*[@id="startStopButton"]')
     PROGRESS_BAR_VALUE = (By.XPATH, '//*[@class="progress-bar bg-info"]')
+
+class TabsPageLoctors:
+    TABS_WHAT = (By.XPATH, '//*[@id="demo-tab-what"]')
+    TABS_WHAT_CONTENT = (By.XPATH, '//*[@id="demo-tabpane-what"]')
+    TABS_ORIGIN = (By.XPATH, '//*[@id="demo-tab-origin"]')
+    TABS_ORIGIN_CONTENT = (By.XPATH, '//*[@id="demo-tabpane-origin"]')
+    TABS_USE = (By.XPATH, '//*[@id="demo-tab-use"]')
+    TABS_USE_CONTENT = (By.XPATH, '//*[@id="demo-tabpane-use"]')
+    TABS_MORE = (By.XPATH, '//*[@id="demo-tab-more"]')
+    TABS_MORE_CONTENT = (By.XPATH, '//*[@//*[@id="demo-tabpane-more"]]')
+
+
