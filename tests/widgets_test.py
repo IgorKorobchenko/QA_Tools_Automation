@@ -1,6 +1,6 @@
 import time
 
-from pages.widgets_page import AccordianPage, AutoCompletePage
+from pages.widgets_page import AccordianPage, AutoCompletePage, DatePickerPage, SliderPage, ProgressBarPage, TabsPage
 
 
 class TestWidgets:
@@ -40,3 +40,51 @@ class TestWidgets:
             color = autocomplete_page.fill_input_single()
             color_resul = autocomplete_page.check_color_in_single()
             assert color == color_resul, 'the added colors are missed in the input'
+
+class TestDatePickerPage:
+
+    def test_change_date(self, driver):
+        date_picker_page = DatePickerPage(driver, 'https://demoqa.com/date-picker')
+        date_picker_page.open()
+        value_date_before, value_date_after = date_picker_page.select_date()
+        assert value_date_before != value_date_after, "the date has not been change"
+
+    def test_change_date_and_time(self, driver):
+        date_picker_page = DatePickerPage(driver, 'https://demoqa.com/date-picker')
+        date_picker_page.open()
+        value_date_before, value_date_after = date_picker_page.select_date_and_time()
+        assert value_date_before != value_date_after, "the date and time have not been change"
+
+
+class TestSliderPage:
+    def test_slider(self, driver):
+        slider = SliderPage(driver, 'https://demoqa.com/slider')
+        slider.open()
+        before, after = slider.change_slider_value()
+        assert before != after, 'the slider value has not been changed'
+
+
+class TestProgressBarPage:
+    def test_progress_bar(self, driver):
+        progress_bar = ProgressBarPage(driver, "https://demoqa.com/progress-bar")
+        progress_bar.open()
+        before, after = progress_bar.change_progress_bar_value()
+        assert before != after, 'the progress bar value has not been changed'
+
+class TestTabsPage:
+
+    def test_tabs(self, driver):
+        tabs = TabsPage(driver, 'https://demoqa.com/tabs')
+        tabs.open()
+        what_button, what_content = tabs.check_tabs('what')
+        origin_button, origin_content = tabs.check_tabs('origin')
+        use_button, use_content = tabs.check_tabs('use')
+        more_button, more_content = tabs.check_tabs('more')
+        assert what_button == 'What' and what_content != 0, "the what tab was not pressed or text is missing"
+        assert origin_button == 'Origin' and origin_content != 0, "the origin tab was not pressed or text is missing"
+        assert use_button == 'Use' and use_content != 0, "the use tab was not pressed or text is missing"
+        assert more_button == 'More' and more_content != 0, "the more tab was not pressed or text is missing"
+
+
+
+
