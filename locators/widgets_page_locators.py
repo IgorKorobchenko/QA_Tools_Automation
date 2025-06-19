@@ -37,7 +37,7 @@ class ProgressBarPageLocators:
     PROGRESS_BAR_BUTTON = (By.XPATH, '//*[@id="startStopButton"]')
     PROGRESS_BAR_VALUE = (By.XPATH, '//*[@class="progress-bar bg-info"]')
 
-class TabsPageLoctors:
+class TabsPageLocators:
     TABS_WHAT = (By.XPATH, '//*[@id="demo-tab-what"]')
     TABS_WHAT_CONTENT = (By.XPATH, '//*[@id="demo-tabpane-what"]')
     TABS_ORIGIN = (By.XPATH, '//*[@id="demo-tab-origin"]')
@@ -47,4 +47,18 @@ class TabsPageLoctors:
     TABS_MORE = (By.XPATH, '//*[@id="demo-tab-more"]')
     TABS_MORE_CONTENT = (By.XPATH, '//*[@//*[@id="demo-tabpane-more"]]')
 
+class ToolTipsPageLocators:
+    BUTTON = (By.CSS_SELECTOR, 'button[id="toolTipButton"]')
+    TOOL_TIP_BUTTON = (By.CSS_SELECTOR, 'button[aria-describedby="buttonToolTip"]')
+
+    FIELD = (By.CSS_SELECTOR, 'input[id="toolTipTextField"]')
+    TOOL_TIP_FIELD = (By.CSS_SELECTOR, 'input[aria-describedby="textFieldToolTip"]')
+
+    CONTRARY_LINK = (By.XPATH, '//*[.="Contrary"]')
+    TOOL_TIP_CONTRARY = (By.CSS_SELECTOR, 'a[aria-describedby="contraryTexToolTip"]')
+
+    SECTION_LINK = (By.XPATH, '//*[.="1.10.32"]')
+    TOOL_TIP_SECTION = (By.CSS_SELECTOR, 'a[aria-describedby="sectionToolTip"]')
+
+    TOOL_TIPS_INNERS = (By.CSS_SELECTOR, 'div[class="tooltip-inner"]')
 
